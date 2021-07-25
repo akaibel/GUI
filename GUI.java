@@ -1,5 +1,6 @@
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
@@ -180,13 +181,13 @@ public class GUI extends JFrame {
 
         public void keyReleased(KeyEvent arg0) {
           // STRG+ abfragen
-          if(arg0.getKeyCode() == 521 && arg0.getModifiersEx() == 2){
+          if(arg0.getKeyCode() == 521 && arg0.getModifiersEx() == InputEvent.CTRL_DOWN_MASK){
             fontSize++;
             schriftgroesseSetzen(fontSize);
 
           }
           // STRG- abfragen
-          else if(arg0.getKeyCode() == 45 && arg0.getModifiersEx() == 2){
+          else if(arg0.getKeyCode() == 45 && arg0.getModifiersEx() == InputEvent.CTRL_DOWN_MASK){
             fontSize--;
             schriftgroesseSetzen(fontSize);
           }
