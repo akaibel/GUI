@@ -19,7 +19,6 @@ import javax.swing.BoxLayout;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.JTextArea;
 import javax.swing.WindowConstants;
 
 /**
@@ -181,13 +180,13 @@ public class GUI extends JFrame {
 
         public void keyReleased(KeyEvent arg0) {
           // STRG+ abfragen
-          if(arg0.getKeyCode() == 521 && arg0.getModifiers() == 2){
+          if(arg0.getKeyCode() == 521 && arg0.getModifiersEx() == 2){
             fontSize++;
             schriftgroesseSetzen(fontSize);
 
           }
           // STRG- abfragen
-          else if(arg0.getKeyCode() == 45 && arg0.getModifiers() == 2){
+          else if(arg0.getKeyCode() == 45 && arg0.getModifiersEx() == 2){
             fontSize--;
             schriftgroesseSetzen(fontSize);
           }
